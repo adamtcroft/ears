@@ -1,0 +1,8 @@
+[] Toast notification on Mac
+[] Toast notification on Windows
+[] Settings view (turn on/off toast)
+[] Dark mode
+[] Resize to be smaller
+[] User configurable complete sound
+[] Package to distribute on Win/Mac
+[] "Always on top" setting

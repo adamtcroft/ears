@@ -1,0 +1,35 @@
+{
+  "name": "ears",
+  "version": "1.0.0",
+  "description": "Ear Fatigue Monitor",
+  "author": "nir.media",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "build:css": "postcss src/styles/input.css -o dist/output.css",
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
+    "autoprefixer": "^10.4.21",
+    "electron": "^36.1.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "luxon": "^3.6.1",
+    "sound-play": "^1.1.0"
+  }
+}
