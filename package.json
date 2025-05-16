@@ -1,6 +1,6 @@
 {
-	"name": "ears",
-	"version": "0.0.1",
+	"name": "Session Monitor",
+	"version": "0.0.2",
 	"description": "Ear Fatigue Monitor",
 	"author": "nir.media",
 	"type": "commonjs",
