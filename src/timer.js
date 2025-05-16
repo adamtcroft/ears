@@ -2,6 +2,7 @@ const sound = require('sound-play');
 const { DateTime, Duration } = require('luxon');
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
+const { Notification } = require('electron');
 
 function Run(inputString)
 {
@@ -11,7 +12,6 @@ function Run(inputString)
 }
 
 function ProcessInput(inputString) {
-	console.log(inputString);
 	var time = DateTime.fromFormat(inputString, "h:mm", {});
 	return time;
 }
@@ -23,7 +23,6 @@ function GetTimeDifference(parsedTime)
 
 function updateTimer(seconds) {
 	// Update the count down every second
-	console.log("Timer starting");
 	var x = setInterval(function() {
 		seconds -= 1;
 
@@ -36,6 +35,10 @@ function updateTimer(seconds) {
 			clearInterval(x);
 			emitter.emit('timer-update', "EXPIRED");
 			sound.play("/Users/adam/Music/SFX Database/Glitchmachines/VIMANA/VIMANA_SAMPLES/ARTIFACT_1/FundamentalRobotics1.wav", 0.3);
+			new Notification({
+				title: "Session Monitor",
+				body: "Timer complete!"
+			}).show()
 		}
 	}, 1000);
 }

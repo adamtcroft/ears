@@ -1,8 +1,16 @@
-[] Toast notification on Mac
-[] Toast notification on Windows
+[X] Toast notification on Mac
+[X] Toast notification on Windows
 [] Settings view (turn on/off toast)
+	- Have WarpGPT explain how make an accordion view
 [] Dark mode
 [] Resize to be smaller
 [] User configurable complete sound
 [] Package to distribute on Win/Mac
 [] "Always on top" setting
+[] Asks the user to complete gratitudes before starting the timer
+[] High score screen
+[] Log of all the time you've focused
+[] Name a block for a task
+[] Task histogram
+[] Connect to audio output
+[] Sound histogram
