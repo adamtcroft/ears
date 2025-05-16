@@ -1,5 +1,5 @@
 {
-	"name": "Session Monitor",
+	"name": "ears",
 	"version": "0.0.2",
 	"description": "Ear Fatigue Monitor",
 	"author": "nir.media",
@@ -29,8 +29,8 @@
 		"sound-play": "^1.1.0"
 	},
 	"build": {
-		"appId": "com.nir.media.ears",
-		"productName": "Ears",
+		"appId": "com.nir.media.session_monitor",
+		"productName": "Session Monitor",
 		"directories": {
 			"output": "release"
 		},
