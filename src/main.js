@@ -47,6 +47,14 @@ app.on("window-all-closed", () => {
 	if (process.platform !== "darwin") app.quit();
 });
 
+ipcMain.on('toggle-toast-notification', (event, value) => {
+	myTimer.SetToastNotification(value);
+});
+
+ipcMain.on('toggle-play-sound', (event, value) => {
+	myTimer.SetPlaySound(value);
+});
+
 ipcMain.on('process-input', (event, inputString) => {
 	myTimer.Run(inputString);
 });

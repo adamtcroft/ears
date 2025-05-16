@@ -5,3 +5,7 @@ contextBridge.exposeInMainWorld('timerAPI', {
 	processInput: (callback) => ipcRenderer.send('process-input', callback)
 })
 
+contextBridge.exposeInMainWorld('settingsAPI', {
+	onToggle_ToastNoticiation: (callback) => ipcRenderer.send('toggle-toast-notification', callback),
+	onToggle_PlaySound: (callback) => ipcRenderer.send('toggle-play-sound', callback)
+})

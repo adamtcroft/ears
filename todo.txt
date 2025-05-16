@@ -1,7 +1,6 @@
 [X] Toast notification on Mac
 [X] Toast notification on Windows
-[] Settings view (turn on/off toast)
-	- Have WarpGPT explain how make an accordion view
+[X] Basic settings (turn on/off toast, sound)
 [] Dark mode
 [] Resize to be smaller
 [] User configurable complete sound

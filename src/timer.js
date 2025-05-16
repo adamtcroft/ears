@@ -4,6 +4,19 @@ const EventEmitter = require('events');
 const emitter = new EventEmitter();
 const { Notification } = require('electron');
 
+let isEnabled_toast = true;
+let isEnabled_sound = true;
+
+function SetToastNotification(value)
+{
+	isEnabled_toast = value;
+}
+
+function SetPlaySound(value)
+{
+	isEnabled_sound = value;
+}
+
 function Run(inputString)
 {
 	var parsedTime = ProcessInput(inputString);
@@ -34,13 +47,21 @@ function updateTimer(seconds) {
 		if (seconds <= 0) {
 			clearInterval(x);
 			emitter.emit('timer-update', "EXPIRED");
-			sound.play("/Users/adam/Music/SFX Database/Glitchmachines/VIMANA/VIMANA_SAMPLES/ARTIFACT_1/FundamentalRobotics1.wav", 0.3);
-			new Notification({
-				title: "Session Monitor",
-				body: "Timer complete!"
-			}).show()
+
+			if (isEnabled_sound)
+			{
+				sound.play("/Users/adam/Music/SFX Database/Glitchmachines/VIMANA/VIMANA_SAMPLES/ARTIFACT_1/FundamentalRobotics1.wav", 0.3);
+			}
+
+			if (isEnabled_toast)
+			{
+				new Notification({
+					title: "Session Monitor",
+					body: "Timer complete!"
+				}).show()
+			}
 		}
 	}, 1000);
 }
 
-module.exports = { Run, emitter}
+module.exports = { Run, SetToastNotification, SetPlaySound, emitter}
