@@ -1,10 +1,12 @@
 [X] Toast notification on Mac
 [X] Toast notification on Windows
 [X] Basic settings (turn on/off toast, sound)
+[X] Complete sound packaged in app
+[X] Package to distribute on Win/Mac
+[] setup electron-store
 [] Dark mode
 [] Resize to be smaller
 [] User configurable complete sound
-[] Package to distribute on Win/Mac
 [] "Always on top" setting
 [] Asks the user to complete gratitudes before starting the timer
 [] High score screen

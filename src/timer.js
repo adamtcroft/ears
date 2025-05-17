@@ -1,11 +1,13 @@
 const sound = require('sound-play');
+const path = require('path');
 const { DateTime, Duration } = require('luxon');
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
-const { Notification } = require('electron');
+const { app, Notification } = require('electron');
 
 let isEnabled_toast = true;
 let isEnabled_sound = true;
+let soundFilepath = path.join(app.getAppPath(), "assets", "sounds", "marimba_tone_007.wav");
 
 function SetToastNotification(value)
 {
@@ -50,7 +52,7 @@ function updateTimer(seconds) {
 
 			if (isEnabled_sound)
 			{
-				sound.play("/Users/adam/Music/SFX Database/Glitchmachines/VIMANA/VIMANA_SAMPLES/ARTIFACT_1/FundamentalRobotics1.wav", 0.3);
+				sound.play(soundFilepath);
 			}
 
 			if (isEnabled_toast)
