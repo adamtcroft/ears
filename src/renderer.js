@@ -1,5 +1,6 @@
 let setting_toast_notification = document.getElementById('setting_toast_notification');
 let setting_play_sound = document.getElementById('setting_play_sound');
+let setting_always_on_top = document.getElementById('setting_always_on_top');
 
 window.timerAPI.onTimerUpdate((event, content) => {
 	document.getElementById("demo").innerHTML = content;
@@ -26,6 +27,15 @@ setting_play_sound.addEventListener('change', () => {
 		value = true;
 	}
 	window.settingsAPI.onToggle_PlaySound(value)
+});
+
+setting_always_on_top.addEventListener('change', () => {
+	let value = false;
+	if (setting_always_on_top.checked)
+	{
+		value = true;
+	}
+	window.settingsAPI.onToggle_AlwaysOnTop(value)
 });
 
 document.getElementById('input_time').addEventListener('keypress', (event) => {

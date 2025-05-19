@@ -3,11 +3,11 @@
 [X] Basic settings (turn on/off toast, sound)
 [X] Complete sound packaged in app
 [X] Package to distribute on Win/Mac
+[X] "Always on top" setting
 [] setup electron-store
 [] Dark mode
 [] Resize to be smaller
 [] User configurable complete sound
-[] "Always on top" setting
 [] Asks the user to complete gratitudes before starting the timer
 [] High score screen
 [] Log of all the time you've focused
@@ -15,3 +15,6 @@
 [] Task histogram
 [] Connect to audio output
 [] Sound histogram
+[] Pick a day to have a weekly update
+[] Build the auto-updater
+	- Can't auto-update until Mac code signing

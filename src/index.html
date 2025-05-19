@@ -13,18 +13,20 @@
     />
     <title>Session Monitor</title>
     <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="../dist/custom.css" />
   </head>
-  <body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-8">
-	  <h1 class="text-3xl font-bold text-blue-600 mb-6">Session Monitor</h1>
+  <body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-8">
+	  <h1 class="text-3xl font-bold text-lime-600 mb-6">Session Monitor</h1>
 	  <div class="w-70">
 		  <div class="flex items-center justify-center gap-4 mb-4 w-full">
-			  <input type="Time" id="input_time" class="rounded p-2">
-			  <button id="start_button" class="px-4 py-2 bg-blue-500 text-white 
-						  rounded hover:bg-blue-600">Start</button>
+			  <input type="Time" id="input_time" class="rounded p-2 bg-gray-800 
+			  text-gray-200 accent-gray-200">
+			  <button id="start_button" class="px-4 py-2 bg-lime-500 font-bold text-gray-800 
+						  rounded hover:bg-lime-400">Start</button>
 		  </div>
-		  <span id="demo" class="inline-block w-full text-xl text-center font-medium text-gray-800 p-4 bg-white rounded-lg shadow"></span>
+		  <span id="demo" class="inline-block w-full text-xl text-center font-medium text-gray-200 p-4 bg-gray-800 rounded-lg"></span>
 	  </div>
-	  <div class="items-left justify-left">
+	  <div class="items-left justify-left text-gray-200">
 		  <input type="checkbox" id="setting_toast_notification" 
 					   checked="checked">
 		  <label for="setting_toast_notification">Toast Notification</label>
@@ -32,6 +34,9 @@
 		  <input type="checkbox" id="setting_play_sound" 
 					   checked="checked">
 		  <label for="setting_play_sound">Play Sound</label>
+		  <br/>
+		  <input type="checkbox" id="setting_always_on_top">
+		  <label for="setting_always_on_top">Always On Top</label>
   </body>
   <script src="renderer.js">
   </script>

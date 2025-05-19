@@ -55,6 +55,16 @@ ipcMain.on('toggle-play-sound', (event, value) => {
 	myTimer.SetPlaySound(value);
 });
 
+ipcMain.on('toggle-always-on-top', (event, value) => {
+	console.log("made it in");
+	console.log(value);
+	win.setVisibleOnAllWorkspaces(value, { visibleOnFullScreen: value });
+	win.setAlwaysOnTop(value, "floating"); // "floating" requires for MacOS
+	win.setFullScreenable(!value);
+	// Below statement completes the flow
+	win.moveTop();
+});
+
 ipcMain.on('process-input', (event, inputString) => {
 	myTimer.Run(inputString);
 });

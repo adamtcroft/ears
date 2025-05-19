@@ -7,5 +7,6 @@ contextBridge.exposeInMainWorld('timerAPI', {
 
 contextBridge.exposeInMainWorld('settingsAPI', {
 	onToggle_ToastNoticiation: (callback) => ipcRenderer.send('toggle-toast-notification', callback),
-	onToggle_PlaySound: (callback) => ipcRenderer.send('toggle-play-sound', callback)
+	onToggle_PlaySound: (callback) => ipcRenderer.send('toggle-play-sound', callback),
+	onToggle_AlwaysOnTop: (callback) => ipcRenderer.send('toggle-always-on-top', callback)
 })
