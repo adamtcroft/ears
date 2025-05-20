@@ -12,7 +12,7 @@
 		"build": "electron-builder build --mac --win",
 		"build:mac": "electron-builder build --mac",
 		"build:win": "electron-builder build --win",
-		"publish": "electron-builder -p always --mac --win"
+		"publish": "electron-builder -p always --mac --win",
 		"publish:mac": "electron-builder -p always --mac",
 		"publish:win": "electron-builder -p always --win"
 	},
