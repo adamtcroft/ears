@@ -4,7 +4,10 @@
 [X] Complete sound packaged in app
 [X] Package to distribute on Win/Mac
 [X] "Always on top" setting
+[] Display settings page
 [] setup electron-store
+	- Going to custom roll settings
+[] Build on windows
 [] Dark mode
 [] Resize to be smaller
 [] User configurable complete sound

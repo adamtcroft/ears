@@ -13,6 +13,8 @@
 		"build:mac": "electron-builder build --mac",
 		"build:win": "electron-builder build --win",
 		"publish": "electron-builder -p always --mac --win"
+		"publish:mac": "electron-builder -p always --mac",
+		"publish:win": "electron-builder -p always --win"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.21",

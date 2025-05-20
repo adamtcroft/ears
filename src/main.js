@@ -15,7 +15,7 @@ let win;
 const createWindow = () => {
 	win = new BrowserWindow({
 		width: 800,
-		height: 600,
+		height: 100,
 		webPreferences: {
 			contextIsolation: true,
 			preload: path.join(__dirname, "bridge.js")
