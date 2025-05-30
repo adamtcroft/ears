@@ -1,20 +1,20 @@
 {
 	"name": "ears",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Ear Fatigue Monitor",
 	"author": "nir.media",
 	"type": "commonjs",
 	"main": "src/main.js",
 	"scripts": {
 		"build:css": "postcss src/styles/input.css -o dist/output.css",
-		"start": "electron .",
+		"start": "npm run build:css && electron .",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "electron-builder build --mac --win",
-		"build:mac": "electron-builder build --mac",
-		"build:win": "electron-builder build --win",
+		"build:mac": "npm run build:css && electron-builder build --mac",
+		"build:win": "npm run build:css && electron-builder build --win",
 		"publish": "electron-builder -p always --mac --win",
-		"publish:mac": "electron-builder -p always --mac",
-		"publish:win": "electron-builder -p always --win"
+		"publish:mac": "npm run build:css && npm run build:mac && electron-builder -p always --mac",
+		"publish:win": "npm run build:css && npm run build:win && electron-builder -p always --win"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.21",

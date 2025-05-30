@@ -4,20 +4,29 @@
 [X] Complete sound packaged in app
 [X] Package to distribute on Win/Mac
 [X] "Always on top" setting
-[] Display settings page
-[] setup electron-store
+[X] Color Start/Stop button
+[X] Stop the timer function
+[X] Build the auto-updater (functionality has been scaffolded)
+	- Can't auto-update until Mac code signing
+[X] Fix bug where you can multi-start timer
+[X] Display settings page
+[X] Build on windows
+[X] Refactor communications to dispatch class
+[X] setup electron-store
 	- Going to custom roll settings
-[] Build on windows
+[X] Build settings json
+[X] User configurable complete sound
+[] Convert user configurable sound css to tailwind
 [] Dark mode
 [] Resize to be smaller
-[] User configurable complete sound
 [] Asks the user to complete gratitudes before starting the timer
 [] High score screen
-[] Log of all the time you've focused
-[] Name a block for a task
+[] JSON data log*
+[] Name a block for a task*
 [] Task histogram
+[] Pick a day to have a weekly update
+
+
+Can't do right now:
 [] Connect to audio output
 [] Sound histogram
-[] Pick a day to have a weekly update
-[] Build the auto-updater
-	- Can't auto-update until Mac code signing

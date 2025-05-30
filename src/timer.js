@@ -5,6 +5,7 @@ const EventEmitter = require('events');
 const emitter = new EventEmitter();
 const { app, Notification } = require('electron');
 
+let seconds = 0;
 let isEnabled_toast = true;
 let isEnabled_sound = true;
 let soundFilepath = path.join(app.getAppPath(), "assets", "sounds", "marimba_tone_007.wav");
@@ -22,8 +23,8 @@ function SetPlaySound(value)
 function Run(inputString)
 {
 	var parsedTime = ProcessInput(inputString);
-	var difference = GetTimeDifference(parsedTime);
-	updateTimer(difference);
+	seconds = GetTimeDifference(parsedTime);
+	UpdateTimer();
 }
 
 function ProcessInput(inputString) {
@@ -36,7 +37,11 @@ function GetTimeDifference(parsedTime)
 	return parsedTime.diff(DateTime.now()).as('seconds');
 }
 
-function updateTimer(seconds) {
+function StopTimer() {
+	seconds = 0;
+}
+
+function UpdateTimer() {
 	// Update the count down every second
 	var x = setInterval(function() {
 		seconds -= 1;
@@ -66,4 +71,4 @@ function updateTimer(seconds) {
 	}, 1000);
 }
 
-module.exports = { Run, SetToastNotification, SetPlaySound, emitter}
+module.exports = { Run, StopTimer, SetToastNotification, SetPlaySound, emitter}
